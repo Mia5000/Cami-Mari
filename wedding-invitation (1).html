@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camila & Marielis - 18 de Julio 2027</title>
+    
+    <!-- Google Fonts - Luxury Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,300;1,6..96,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,300;1,400&family=Raleway:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --lilac: #C8A8D8;
+            --soft-pink: #F8E8F0;
+            --gold: #C9A961;
+            --white: #FEFEFE;
+            --cream: #FAF8F6;
+            --light-lilac: #E8DCF0;
+            --dark-lilac: #9B7BA8;
+            --deep-purple: #6B5B73;
+            --text-dark: #2B2833;
+            --text-mid: #5A5560;
+            --text-light: #9B95A1;
+            --border-light: rgba(201, 169, 97, 0.15);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            background: var(--white);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.6;
+        }
+        
+        /* Luxury Typography */
+        h1, h2, h3 {
+            font-family: 'Bodoni Moda', serif;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+        }
+        
+        .serif-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 300;
+        }
+        
+        /* Sophisticated Tulip Decorations */
+        .tulip-bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.08;
+        }
+        
+        .tulip-accent {
+            position: absolute;
+            opacity: 0.12;
+        }
+        
+        .tulip-1 {
+            top: 15%;
+            left: -5%;
+            width: 180px;
+            transform: rotate(-15deg);
+            animation: sway 15s ease-in-out infinite;
+        }
+        
+        .tulip-2 {
+            top: 5%;
+            right: 10%;
+            width: 140px;
+            transform: rotate(25deg);
+            animation: sway 18s ease-in-out infinite 2s;
+        }
+        
+        .tulip-3 {
+            bottom: 20%;
+            left: 5%;
+            width: 160px;
+            transform: rotate(10deg);
+            animation: sway 20s ease-in-out infinite 4s;
+        }
+        
+        .tulip-4 {
+            bottom: 35%;
+            right: -3%;
+            width: 190px;
+            transform: rotate(-20deg);
+            animation: sway 17s ease-in-out infinite 6s;
+        }
+        
+        @keyframes sway {
+            0%, 100% { transform: translateX(0) rotate(var(--initial-rotate, 0deg)); }
+            50% { transform: translateX(10px) rotate(calc(var(--initial-rotate, 0deg) + 3deg)); }
+        }
+        
+        /* Elegant Grain Overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0, 0, 0, 0.008) 2px,
+                    rgba(0, 0, 0, 0.008) 4px
+                );
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.5;
+        }
+        
+        /* Refined Music Player */
+        .music-control {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 1000;
+        }
+        
+        .music-button {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(200, 168, 216, 0.95), rgba(155, 123, 168, 0.95));
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(201, 169, 97, 0.3);
+            box-shadow: 
+                0 8px 32px rgba(155, 123, 168, 0.25),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .music-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.6s ease;
+        }
+        
+        .music-button:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 
+                0 12px 48px rgba(155, 123, 168, 0.35),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+        }
+        
+        .music-button:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        
+        .music-button:active {
+            transform: translateY(-2px) scale(1.02);
+        }
+        
+        .music-icon {
+            color: white;
+            font-size: 20px;
+            transition: opacity 0.3s ease;
+        }
+        
+        .music-playing .music-icon {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(0.95); }
+        }
+        
+        .music-tooltip {
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.98);
+            padding: 12px 20px;
+            border-radius: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-light);
+        }
+        
+        .music-button:hover .music-tooltip {
+            opacity: 1;
+            transform: translateY(-50%) translateX(-8px);
+        }
+        
+        .music-tooltip-title {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-dark);
+            display: block;
+            font-family: 'Raleway', sans-serif;
+            letter-spacing: 0.02em;
+        }
+        
+        .music-tooltip-artist {
+            font-size: 11px;
+            color: var(--text-light);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+        
+        /* Hero Section - Editorial Luxury */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: 
+                radial-gradient(ellipse at top, rgba(248, 232, 240, 0.4), transparent 50%),
+                radial-gradient(ellipse at bottom, rgba(232, 220, 240, 0.3), transparent 50%),
+                var(--white);
+            padding: 120px 40px 80px;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .monogram {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 50px;
+            position: relative;
+        }
+        
+        .monogram-circle {
+            width: 100%;
+            height: 100%;
+            border: 1.5px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(135deg, rgba(200, 168, 216, 0.08), rgba(248, 232, 240, 0.08));
+            box-shadow: 
+                0 0 0 8px rgba(201, 169, 97, 0.08),
+                inset 0 2px 4px rgba(0, 0, 0, 0.03);
+        }
+        
+        .monogram-text {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 40px;
+            font-weight: 300;
+            color: var(--gold);
+            letter-spacing: 0.1em;
+        }
+        
+        .names-container {
+            margin-bottom: 40px;
+        }
+        
+        .couple-names {
+            font-size: clamp(52px, 8vw, 92px);
+            font-weight: 400;
+            color: var(--deep-purple);
+            letter-spacing: 0.03em;
+            line-height: 1.1;
+            margin: 0;
+            position: relative;
+        }
+        
+        .name-first,
+        .name-second {
+            display: inline-block;
+            position: relative;
+        }
+        
+        .name-ampersand {
+            font-size: clamp(36px, 6vw, 64px);
+            color: var(--gold);
+            margin: 0 clamp(20px, 3vw, 40px);
+            font-weight: 300;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .date-divider {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 35px auto;
+            position: relative;
+        }
+        
+        .date-divider::before,
+        .date-divider::after {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: var(--gold);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .date-divider::before { left: -10px; }
+        .date-divider::after { right: -10px; }
+        
+        .wedding-date {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(22px, 3.5vw, 32px);
+            font-weight: 400;
+            color: var(--text-mid);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-style: normal;
+        }
+        
+        .hero-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 17px;
+            font-weight: 300;
+            color: var(--text-light);
+            font-style: italic;
+            letter-spacing: 0.05em;
+            margin-top: 25px;
+        }
+        
+        /* Countdown - Minimalist Elegance */
+        .countdown-section {
+            padding: 100px 40px;
+            background: var(--cream);
+            position: relative;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        
+        .section-title {
+            font-size: clamp(38px, 5vw, 56px);
+            font-weight: 400;
+            color: var(--deep-purple);
+            letter-spacing: 0.02em;
+            margin-bottom: 15px;
+        }
+        
+        .section-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            font-weight: 300;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        
+        .countdown-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 30px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .countdown-box {
+            background: white;
+            padding: 35px 20px;
+            text-align: center;
+            border-radius: 4px;
+            position: relative;
+            border: 1px solid var(--border-light);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .countdown-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .countdown-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(107, 91, 115, 0.12);
+            border-color: var(--gold);
+        }
+        
+        .countdown-box:hover::before {
+            opacity: 1;
+        }
+        
+        .countdown-value {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 56px;
+            font-weight: 400;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 12px;
+            line-height: 1;
+            letter-spacing: 0.02em;
+        }
+        
+        .countdown-unit {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--text-mid);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+        
+        /* Details Section - Two Column Layout */
+        .details-section {
+            padding: 100px 40px;
+            background: white;
+        }
+        
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .detail-item {
+            padding: 50px 40px;
+            background: linear-gradient(135deg, var(--cream) 0%, rgba(232, 220, 240, 0.2) 100%);
+            border: 1px solid var(--border-light);
+            border-radius: 2px;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .detail-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(200, 168, 216, 0.05), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+        
+        .detail-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(107, 91, 115, 0.12);
+            border-color: rgba(201, 169, 97, 0.3);
+        }
+        
+        .detail-item:hover::after {
+            opacity: 1;
+        }
+        
+        .custom-icon {
+            width: 44px;
+            height: 44px;
+            margin-bottom: 25px;
+        }
+        
+        .detail-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 12px;
+        }
+        
+        .detail-primary {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 28px;
+            font-weight: 400;
+            color: var(--deep-purple);
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .detail-secondary {
+            font-size: 15px;
+            color: var(--text-mid);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+        
+        /* Map Section - Sophisticated */
+        .map-section {
+            padding: 100px 40px;
+            background: var(--cream);
+        }
+        
+        .map-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .map-frame {
+            border-radius: 2px;
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            box-shadow: 
+                0 20px 60px rgba(107, 91, 115, 0.12),
+                0 0 0 1px rgba(201, 169, 97, 0.1);
+            margin-bottom: 35px;
+            position: relative;
+        }
+        
+        .map-frame::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            z-index: 1;
+        }
+        
+        .map-frame iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            display: block;
+        }
+        
+        .map-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .map-btn {
+            padding: 16px 36px;
+            background: white;
+            color: var(--deep-purple);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border: 1px solid var(--border-light);
+            border-radius: 2px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .map-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(201, 169, 97, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .map-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(107, 91, 115, 0.15);
+            border-color: var(--gold);
+            color: var(--deep-purple);
+        }
+        
+        .map-btn:hover::before {
+            left: 100%;
+        }
+        
+        .map-btn-icon {
+            width: 18px;
+            height: 18px;
+        }
+        
+        /* Dress Code - Refined */
+        .dress-code-section {
+            padding: 100px 40px;
+            background: white;
+        }
+        
+        .info-card {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 60px 50px;
+            background: var(--cream);
+            border: 1px solid var(--border-light);
+            border-radius: 2px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .info-card::before,
+        .info-card::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--gold);
+        }
+        
+        .info-card::before {
+            top: 20px;
+            left: 20px;
+            border-right: none;
+            border-bottom: none;
+        }
+        
+        .info-card::after {
+            bottom: 20px;
+            right: 20px;
+            border-left: none;
+            border-top: none;
+        }
+        
+        .info-icon-wrapper {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, rgba(200, 168, 216, 0.1), rgba(248, 232, 240, 0.1));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border-light);
+        }
+        
+        .info-icon {
+            width: 36px;
+            height: 36px;
+        }
+        
+        .info-title {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 38px;
+            font-weight: 400;
+            color: var(--deep-purple);
+            margin-bottom: 20px;
+            letter-spacing: 0.05em;
+        }
+        
+        .info-description {
+            font-size: 16px;
+            color: var(--text-mid);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+        
+        /* Gift Section - Subtle Elegance */
+        .gift-section {
+            padding: 100px 40px;
+            background: linear-gradient(135deg, rgba(248, 232, 240, 0.3) 0%, rgba(232, 220, 240, 0.2) 100%);
+        }
+        
+        .gift-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .gift-icon-wrapper {
+            margin-bottom: 35px;
+        }
+        
+        .gift-icon {
+            width: 52px;
+            height: 52px;
+            animation: gentle-sway 4s ease-in-out infinite;
+        }
+        
+        @keyframes gentle-sway {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+        }
+        
+        .gift-message {
+            font-size: 17px;
+            color: var(--text-mid);
+            line-height: 1.9;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* RSVP Section - Luxury Form Design */
+        .rsvp-section {
+            padding: 100px 40px;
+            background: white;
+        }
+        
+        .rsvp-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .rsvp-form {
+            padding: 50px 45px;
+            background: var(--cream);
+            border: 1px solid var(--border-light);
+            border-radius: 2px;
+        }
+        
+        .form-group {
+            margin-bottom: 32px;
+        }
+        
+        .form-label {
+            display: block;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-mid);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 12px;
+        }
+        
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 16px 20px;
+            background: white;
+            border: 1px solid rgba(107, 91, 115, 0.15);
+            border-radius: 2px;
+            font-size: 15px;
+            font-family: 'Raleway', sans-serif;
+            color: var(--text-dark);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            outline: none;
+        }
+        
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.1);
+        }
+        
+        .form-textarea {
+            resize: vertical;
+            min-height: 100px;
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%239B7BA8' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+            padding-right: 50px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 18px 40px;
+            background: linear-gradient(135deg, var(--dark-lilac), var(--lilac));
+            color: white;
+            border: none;
+            border-radius: 2px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 36px rgba(155, 123, 168, 0.3);
+        }
+        
+        .submit-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        /* Thank You Overlay - Refined Animation */
+        .thank-you-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(254, 254, 254, 0.98);
+            backdrop-filter: blur(10px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .thank-you-modal.active {
+            display: flex;
+            opacity: 1;
+        }
+        
+        .thank-you-box {
+            max-width: 500px;
+            padding: 60px 50px;
+            background: white;
+            border: 1px solid var(--border-light);
+            border-radius: 2px;
+            text-align: center;
+            box-shadow: 0 24px 80px rgba(107, 91, 115, 0.2);
+            position: relative;
+            animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .thank-you-emoji {
+            font-size: 64px;
+            margin-bottom: 25px;
+            display: block;
+            animation: float-gentle 3s ease-in-out infinite;
+        }
+        
+        @keyframes float-gentle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .thank-you-heading {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 42px;
+            font-weight: 400;
+            color: var(--deep-purple);
+            margin-bottom: 20px;
+            letter-spacing: 0.02em;
+        }
+        
+        .thank-you-message {
+            font-size: 16px;
+            color: var(--text-mid);
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+        
+        .close-modal-btn {
+            padding: 14px 40px;
+            background: var(--gold);
+            color: white;
+            border: none;
+            border-radius: 2px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .close-modal-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(201, 169, 97, 0.4);
+        }
+        
+        /* Footer - Minimalist */
+        footer {
+            padding: 80px 40px;
+            background: linear-gradient(135deg, var(--deep-purple), var(--dark-lilac));
+            color: white;
+            text-align: center;
+        }
+        
+        .footer-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 19px;
+            font-style: italic;
+            font-weight: 300;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .footer-names {
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            opacity: 0.7;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 100px 25px 60px;
+            }
+            
+            .couple-names {
+                font-size: 44px;
+            }
+            
+            .countdown-section,
+            .details-section,
+            .map-section,
+            .dress-code-section,
+            .gift-section,
+            .rsvp-section {
+                padding: 70px 25px;
+            }
+            
+            .details-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .detail-item {
+                padding: 40px 30px;
+            }
+            
+            .countdown-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .countdown-box {
+                padding: 25px 15px;
+            }
+            
+            .countdown-value {
+                font-size: 44px;
+            }
+            
+            .music-control {
+                bottom: 25px;
+                right: 25px;
+            }
+            
+            .music-button {
+                width: 56px;
+                height: 56px;
+            }
+            
+            .music-tooltip {
+                display: none;
+            }
+            
+            .info-card,
+            .rsvp-form {
+                padding: 40px 30px;
+            }
+            
+            .map-actions {
+                flex-direction: column;
+            }
+            
+            .map-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .monogram {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .monogram-text {
+                font-size: 32px;
+            }
+            
+            .section-title {
+                font-size: 34px;
+            }
+        }
+        
+        /* Smooth Transitions */
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        a, button {
+            -webkit-touch-callout: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Tulip Background Decorations -->
+    <div class="tulip-bg">
+        <svg class="tulip-accent tulip-1" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 260 Q70 200 70 150 Q70 100 100 60 Q130 100 130 150 Q130 200 100 260" fill="#C8A8D8" opacity="0.4"/>
+            <ellipse cx="100" cy="140" rx="20" ry="35" fill="#F8E8F0" opacity="0.5"/>
+            <line x1="100" y1="260" x2="100" y2="290" stroke="#9B7BA8" stroke-width="2"/>
+        </svg>
+        
+        <svg class="tulip-accent tulip-2" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 260 Q70 200 70 150 Q70 100 100 60 Q130 100 130 150 Q130 200 100 260" fill="#F8E8F0" opacity="0.4"/>
+            <ellipse cx="100" cy="140" rx="20" ry="35" fill="#C8A8D8" opacity="0.5"/>
+            <line x1="100" y1="260" x2="100" y2="290" stroke="#C9A961" stroke-width="2"/>
+        </svg>
+        
+        <svg class="tulip-accent tulip-3" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 260 Q70 200 70 150 Q70 100 100 60 Q130 100 130 150 Q130 200 100 260" fill="#E8DCF0" opacity="0.4"/>
+            <ellipse cx="100" cy="140" rx="20" ry="35" fill="#F8E8F0" opacity="0.5"/>
+            <line x1="100" y1="260" x2="100" y2="290" stroke="#9B7BA8" stroke-width="2"/>
+        </svg>
+        
+        <svg class="tulip-accent tulip-4" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 260 Q70 200 70 150 Q70 100 100 60 Q130 100 130 150 Q130 200 100 260" fill="#C8A8D8" opacity="0.4"/>
+            <ellipse cx="100" cy="140" rx="20" ry="35" fill="#E8DCF0" opacity="0.5"/>
+            <line x1="100" y1="260" x2="100" y2="290" stroke="#C9A961" stroke-width="2"/>
+        </svg>
+    </div>
+    
+    <!-- Music Control -->
+    <div class="music-control">
+        <button class="music-button" id="musicBtn" aria-label="Toggle music">
+            <span class="music-icon" id="musicIcon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 18V5L21 3V16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="6" cy="18" r="3" stroke="white" stroke-width="2"/>
+                    <circle cx="18" cy="16" r="3" stroke="white" stroke-width="2"/>
+                </svg>
+            </span>
+            <div class="music-tooltip">
+                <span class="music-tooltip-title">Young and Beautiful</span>
+                <span class="music-tooltip-artist">Lana Del Rey</span>
+            </div>
+        </button>
+    </div>
+    
+    <!-- Audio Element -->
+    <audio id="weddingAudio" loop>
+        <!-- Replace with actual song URL -->
+        <source src="" type="audio/mpeg">
+    </audio>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="monogram">
+                <div class="monogram-circle">
+                    <span class="monogram-text">C&M</span>
+                </div>
+            </div>
+            
+            <div class="names-container">
+                <h1 class="couple-names">
+                    <span class="name-first">Camila</span>
+                    <span class="name-ampersand">&</span>
+                    <span class="name-second">Marielis</span>
+                </h1>
+            </div>
+            
+            <div class="date-divider"></div>
+            
+            <p class="wedding-date">18 de Julio de 2027</p>
+            <p class="hero-subtitle">Te invitamos a celebrar nuestro amor</p>
+        </div>
+    </section>
+    
+    <!-- Countdown Section -->
+    <section class="countdown-section">
+        <div class="section-header">
+            <h2 class="section-title">Cuenta Regresiva</h2>
+            <p class="section-subtitle">El tiempo vuela cuando estás enamorada</p>
+        </div>
+        
+        <div class="countdown-grid">
+            <div class="countdown-box">
+                <span class="countdown-value" id="days">000</span>
+                <span class="countdown-unit">Días</span>
+            </div>
+            <div class="countdown-box">
+                <span class="countdown-value" id="hours">00</span>
+                <span class="countdown-unit">Horas</span>
+            </div>
+            <div class="countdown-box">
+                <span class="countdown-value" id="minutes">00</span>
+                <span class="countdown-unit">Minutos</span>
+            </div>
+            <div class="countdown-box">
+                <span class="countdown-value" id="seconds">00</span>
+                <span class="countdown-unit">Segundos</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Details Section -->
+    <section class="details-section">
+        <div class="section-header">
+            <h2 class="section-title">Detalles</h2>
+        </div>
+        
+        <div class="details-grid">
+            <div class="detail-item">
+                <svg class="custom-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="9" stroke="#C9A961" stroke-width="1.5"/>
+                    <path d="M12 6V12L16 14" stroke="#C9A961" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <div class="detail-label">Hora</div>
+                <div class="detail-primary">12:00 md</div>
+                <div class="detail-secondary">Recepción y ceremonia</div>
+            </div>
+            
+            <div class="detail-item">
+                <svg class="custom-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L4 8V21H9V15H15V21H20V8L12 2Z" stroke="#C9A961" stroke-width="1.5" stroke-linejoin="round"/>
+                    <path d="M12 12L12 12.01" stroke="#C9A961" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <div class="detail-label">Lugar</div>
+                <div class="detail-primary">Casa Pinto</div>
+                <div class="detail-secondary">Av. 8, San José, San Pedro<br>Los Yoses, 11501</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="section-header">
+            <h2 class="section-title">Ubicación</h2>
+        </div>
+        
+        <div class="map-wrapper">
+            <div class="map-frame">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.897!2d-84.0542!3d9.9347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwNTYnMDQuOSJOIDg0wrAwMycxNS4xIlc!5e0!3m2!1ses!2scr!4v1234567890"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            
+            <div class="map-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Av.+8,+San+Jos%C3%A9,+San+Pedro,+Los+Yoses,+11501" 
+                   target="_blank" 
+                   rel="noopener" 
+                   class="map-btn">
+                    <svg class="map-btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
+                    </svg>
+                    Google Maps
+                </a>
+                <a href="https://waze.com/ul?q=Av.+8,+San+Jos%C3%A9,+San+Pedro,+Los+Yoses,+11501" 
+                   target="_blank" 
+                   rel="noopener" 
+                   class="map-btn">
+                    <svg class="map-btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="12" cy="9" r="2.5" fill="currentColor"/>
+                    </svg>
+                    Waze
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Dress Code Section -->
+    <section class="dress-code-section">
+        <div class="section-header">
+            <h2 class="section-title">Código de Vestimenta</h2>
+        </div>
+        
+        <div class="info-card">
+            <div class="info-icon-wrapper">
+                <svg class="info-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L8 6V8H4V20H20V8H16V6L12 2Z" stroke="#C9A961" stroke-width="1.5" stroke-linejoin="round"/>
+                    <line x1="8" y1="12" x2="16" y2="12" stroke="#C9A961" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="8" y1="16" x2="16" y2="16" stroke="#C9A961" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <h3 class="info-title">Cocktail</h3>
+            <p class="info-description">
+                Elegancia casual. Queremos que te sientas cómodo/a y radiante en nuestra celebración.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Gift Section -->
+    <section class="gift-section">
+        <div class="section-header">
+            <h2 class="section-title">Lluvia de Sobres</h2>
+        </div>
+        
+        <div class="gift-content">
+            <div class="gift-icon-wrapper">
+                <svg class="gift-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 12V22H4V12" stroke="#C9A961" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 7H2V12H22V7Z" stroke="#C9A961" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 22V7" stroke="#C9A961" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 7H7.5C6.5 7 5 6 5 4.5C5 3 6 2 7.5 2C9 2 12 5 12 7Z" stroke="#C9A961" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 7H16.5C17.5 7 19 6 19 4.5C19 3 18 2 16.5 2C15 2 12 5 12 7Z" stroke="#C9A961" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <p class="gift-message">
+                Tu presencia es nuestro mejor regalo. Sin embargo, si deseas contribuir a nuestro futuro juntas, 
+                agradecemos de corazón tu generosidad. Habrá un buzón especial durante la celebración para 
+                tus buenos deseos y bendiciones.
+            </p>
+        </div>
+    </section>
+    
+    <!-- RSVP Section -->
+    <section class="rsvp-section">
+        <div class="section-header">
+            <h2 class="section-title">Confirmación</h2>
+            <p class="section-subtitle">Por favor confirma tu asistencia</p>
+        </div>
+        
+        <div class="rsvp-container">
+            <form class="rsvp-form" id="rsvpForm">
+                <div class="form-group">
+                    <label class="form-label" for="name">Nombre Completo</label>
+                    <input type="text" id="name" class="form-input" required placeholder="Tu nombre y apellido">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="attendance">Asistencia</label>
+                    <select id="attendance" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="yes">Sí, asistiré con mucho gusto</option>
+                        <option value="no">No podré asistir</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="dietary">Restricciones Alimenticias (Opcional)</label>
+                    <textarea id="dietary" class="form-textarea" placeholder="Déjanos saber si tienes alguna restricción alimenticia"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Confirmar Asistencia</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Thank You Modal -->
+    <div class="thank-you-modal" id="thankYouModal">
+        <div class="thank-you-box">
+            <span class="thank-you-emoji">💐</span>
+            <h3 class="thank-you-heading">¡Gracias!</h3>
+            <p class="thank-you-message">
+                Hemos recibido tu confirmación.<br>
+                Estamos emocionadas de celebrar contigo.
+            </p>
+            <button class="close-modal-btn" onclick="closeModal()">Cerrar</button>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p class="footer-quote">"El amor es paciente, el amor es bondadoso"</p>
+        <p class="footer-names">CAMILA & MARIELIS • 18.07.2027</p>
+    </footer>
+    
+    <script>
+        // Countdown Timer
+        const weddingDate = new Date('July 18, 2027 12:00:00').getTime();
+        
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+            
+            if (distance < 0) {
+                document.getElementById('days').textContent = '000';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                return;
+            }
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(3, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+        
+        // Music Player with Proper Error Handling
+        const musicBtn = document.getElementById('musicBtn');
+        const audio = document.getElementById('weddingAudio');
+        const musicIcon = document.getElementById('musicIcon');
+        let isPlaying = false;
+        let hasInteracted = false;
+        
+        // Update icon based on state
+        function updateMusicIcon(playing) {
+            if (playing) {
+                musicIcon.innerHTML = `
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" y="4" width="4" height="16" fill="white"/>
+                        <rect x="14" y="4" width="4" height="16" fill="white"/>
+                    </svg>
+                `;
+                musicBtn.classList.add('music-playing');
+            } else {
+                musicIcon.innerHTML = `
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18V5L21 3V16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="6" cy="18" r="3" stroke="white" stroke-width="2"/>
+                        <circle cx="18" cy="16" r="3" stroke="white" stroke-width="2"/>
+                    </svg>
+                `;
+                musicBtn.classList.remove('music-playing');
+            }
+        }
+        
+        // Music toggle
+        musicBtn.addEventListener('click', async (e) => {
+            e.preventDefault();
+            hasInteracted = true;
+            
+            try {
+                if (isPlaying) {
+                    audio.pause();
+                    isPlaying = false;
+                    updateMusicIcon(false);
+                } else {
+                    const playPromise = audio.play();
+                    if (playPromise !== undefined) {
+                        await playPromise;
+                        isPlaying = true;
+                        updateMusicIcon(true);
+                    }
+                }
+            } catch (error) {
+                console.log('Audio playback:', error.message);
+                isPlaying = false;
+                updateMusicIcon(false);
+            }
+        });
+        
+        // Handle audio events
+        audio.addEventListener('pause', () => {
+            if (hasInteracted) {
+                isPlaying = false;
+                updateMusicIcon(false);
+            }
+        });
+        
+        audio.addEventListener('play', () => {
+            isPlaying = true;
+            updateMusicIcon(true);
+        });
+        
+        // Prevent errors from audio state changes
+        audio.addEventListener('error', (e) => {
+            console.log('Audio source not available');
+        });
+        
+        // RSVP Form Submission
+        const rsvpForm = document.getElementById('rsvpForm');
+        const thankYouModal = document.getElementById('thankYouModal');
+        
+        rsvpForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                attendance: document.getElementById('attendance').value,
+                dietary: document.getElementById('dietary').value
+            };
+            
+            // Here you would send data to your backend
+            console.log('RSVP submitted:', formData);
+            
+            // Show thank you modal
+            thankYouModal.classList.add('active');
+            
+            // Reset form
+            rsvpForm.reset();
+            
+            // Auto close after 4 seconds
+            setTimeout(() => {
+                closeModal();
+            }, 4000);
+        });
+        
+        function closeModal() {
+            thankYouModal.classList.remove('active');
+        }
+        
+        // Close modal on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && thankYouModal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Entrance animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(section);
+        });
+        
+        // Initialize first section immediately
+        const heroSection = document.querySelector('.hero');
+        if (heroSection) {
+            heroSection.style.opacity = '1';
+            heroSection.style.transform = 'translateY(0)';
+        }
+    </script>
+</body>
+</html>
