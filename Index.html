@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camila & Marielis - 18 de Julio 2027</title>
-    
+
     <!-- Google Fonts - Luxury Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,300;1,6..96,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,300;1,400&family=Raleway:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy&family=MonteCarlo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,300;1,6..96,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,300;1,400&family=Raleway:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+
     <style>
         :root {
             --lilac: #C8A8D8;
@@ -30,17 +35,17 @@
             --border-light: rgba(201, 169, 97, 0.15);
             --border-pink: rgba(245, 198, 213, 0.3);
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         html {
             scroll-behavior: smooth;
         }
-        
+
         body {
             font-family: 'Raleway', sans-serif;
             background: var(--white);
@@ -50,20 +55,22 @@
             -moz-osx-font-smoothing: grayscale;
             line-height: 1.6;
         }
-        
+
         /* Luxury Typography */
-        h1, h2, h3 {
-            font-family: 'Bodoni Moda', serif;
+        h1,
+        h2,
+        h3 {
+            font-family: 'MonteCarlo', cursive;
             font-weight: 500;
             letter-spacing: 0.02em;
         }
-        
+
         .serif-text {
             font-family: 'Playfair Display', serif;
             font-style: italic;
             font-weight: 300;
         }
-        
+
         /* Sophisticated Tulip Decorations */
         .tulip-bg {
             position: fixed;
@@ -75,12 +82,12 @@
             z-index: 0;
             opacity: 0.08;
         }
-        
+
         .tulip-accent {
             position: absolute;
             opacity: 0.12;
         }
-        
+
         .tulip-1 {
             top: 15%;
             left: -5%;
@@ -88,7 +95,7 @@
             transform: rotate(-15deg);
             animation: sway 15s ease-in-out infinite;
         }
-        
+
         .tulip-2 {
             top: 5%;
             right: 10%;
@@ -96,7 +103,7 @@
             transform: rotate(25deg);
             animation: sway 18s ease-in-out infinite 2s;
         }
-        
+
         .tulip-3 {
             bottom: 20%;
             left: 5%;
@@ -104,7 +111,7 @@
             transform: rotate(10deg);
             animation: sway 20s ease-in-out infinite 4s;
         }
-        
+
         .tulip-4 {
             bottom: 35%;
             right: -3%;
@@ -112,12 +119,19 @@
             transform: rotate(-20deg);
             animation: sway 17s ease-in-out infinite 6s;
         }
-        
+
         @keyframes sway {
-            0%, 100% { transform: translateX(0) rotate(var(--initial-rotate, 0deg)); }
-            50% { transform: translateX(10px) rotate(calc(var(--initial-rotate, 0deg) + 3deg)); }
+
+            0%,
+            100% {
+                transform: translateX(0) rotate(var(--initial-rotate, 0deg));
+            }
+
+            50% {
+                transform: translateX(10px) rotate(calc(var(--initial-rotate, 0deg) + 3deg));
+            }
         }
-        
+
         /* Elegant Grain Overlay */
         body::before {
             content: '';
@@ -126,19 +140,17 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: 
-                repeating-linear-gradient(
-                    0deg,
+            background-image:
+                repeating-linear-gradient(0deg,
                     transparent,
                     transparent 2px,
                     rgba(0, 0, 0, 0.008) 2px,
-                    rgba(0, 0, 0, 0.008) 4px
-                );
+                    rgba(0, 0, 0, 0.008) 4px);
             pointer-events: none;
             z-index: 9999;
             opacity: 0.5;
         }
-        
+
         /* Refined Music Player */
         .music-control {
             position: fixed;
@@ -146,7 +158,7 @@
             right: 40px;
             z-index: 1000;
         }
-        
+
         .music-button {
             width: 64px;
             height: 64px;
@@ -154,7 +166,7 @@
             background: linear-gradient(135deg, rgba(200, 168, 216, 0.95), rgba(155, 123, 168, 0.95));
             backdrop-filter: blur(20px);
             border: 1px solid rgba(201, 169, 97, 0.3);
-            box-shadow: 
+            box-shadow:
                 0 8px 32px rgba(155, 123, 168, 0.25),
                 inset 0 1px 0 rgba(255, 255, 255, 0.3);
             cursor: pointer;
@@ -165,7 +177,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .music-button::before {
             content: '';
             position: absolute;
@@ -177,37 +189,46 @@
             transform: translate(-50%, -50%) scale(0);
             transition: transform 0.6s ease;
         }
-        
+
         .music-button:hover {
             transform: translateY(-4px) scale(1.05);
-            box-shadow: 
+            box-shadow:
                 0 12px 48px rgba(155, 123, 168, 0.35),
                 inset 0 1px 0 rgba(255, 255, 255, 0.4);
         }
-        
+
         .music-button:hover::before {
             transform: translate(-50%, -50%) scale(1);
         }
-        
+
         .music-button:active {
             transform: translateY(-2px) scale(1.02);
         }
-        
+
         .music-icon {
             color: white;
             font-size: 20px;
             transition: opacity 0.3s ease;
         }
-        
+
         .music-playing .music-icon {
             animation: pulse 2s ease-in-out infinite;
         }
-        
+
         @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.8; transform: scale(0.95); }
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.8;
+                transform: scale(0.95);
+            }
         }
-        
+
         .music-tooltip {
             position: absolute;
             right: 80px;
@@ -223,12 +244,12 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             border: 1px solid var(--border-light);
         }
-        
+
         .music-button:hover .music-tooltip {
             opacity: 1;
             transform: translateY(-50%) translateX(-8px);
         }
-        
+
         .music-tooltip-title {
             font-size: 13px;
             font-weight: 500;
@@ -237,14 +258,14 @@
             font-family: 'Raleway', sans-serif;
             letter-spacing: 0.02em;
         }
-        
+
         .music-tooltip-artist {
             font-size: 11px;
             color: var(--text-light);
             font-family: 'Playfair Display', serif;
             font-style: italic;
         }
-        
+
         /* Hero Section - Editorial Luxury with Floral Watercolor */
         .hero {
             min-height: 100vh;
@@ -252,7 +273,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            background: 
+            background:
                 radial-gradient(ellipse at top right, rgba(255, 214, 232, 0.3), transparent 60%),
                 radial-gradient(ellipse at bottom left, rgba(232, 220, 240, 0.25), transparent 60%),
                 radial-gradient(ellipse at center, rgba(248, 232, 240, 0.2), transparent 70%),
@@ -260,7 +281,7 @@
             padding: 120px 40px 80px;
             overflow: hidden;
         }
-        
+
         /* Watercolor Floral Decorations - PNG Images */
         .floral-decoration {
             position: absolute;
@@ -270,7 +291,7 @@
             object-fit: contain;
             filter: drop-shadow(0 4px 8px rgba(245, 198, 213, 0.15));
         }
-        
+
         .floral-top-right {
             top: 80px;
             right: 50px;
@@ -278,7 +299,7 @@
             animation: gentle-float 8s ease-in-out infinite;
             transform: rotate(0deg);
         }
-        
+
         .floral-bottom-left {
             bottom: 60px;
             left: 30px;
@@ -286,7 +307,7 @@
             animation: gentle-float 10s ease-in-out infinite 2s;
             transform: scaleX(-1) rotate(10deg);
         }
-        
+
         .floral-accent-top {
             top: 150px;
             left: 10%;
@@ -294,7 +315,7 @@
             animation: gentle-sway-slow 12s ease-in-out infinite 1s;
             transform: rotate(25deg);
         }
-        
+
         .floral-accent-bottom {
             bottom: 100px;
             right: 15%;
@@ -302,31 +323,45 @@
             animation: gentle-sway-slow 14s ease-in-out infinite 3s;
             transform: scaleX(-1) rotate(-15deg);
         }
-        
+
         @keyframes gentle-float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
         }
-        
+
         @keyframes gentle-sway-slow {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(10px); }
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(10px);
+            }
         }
-        
+
         .hero-content {
             max-width: 1100px;
             text-align: center;
             position: relative;
             z-index: 10;
         }
-        
+
         .monogram {
             width: 100px;
             height: 100px;
             margin: 0 auto 50px;
             position: relative;
         }
-        
+
         .monogram-circle {
             width: 100%;
             height: 100%;
@@ -337,13 +372,13 @@
             justify-content: center;
             position: relative;
             background: linear-gradient(135deg, rgba(200, 168, 216, 0.08), rgba(248, 232, 240, 0.08));
-            box-shadow: 
+            box-shadow:
                 0 0 0 8px rgba(201, 169, 97, 0.08),
                 inset 0 2px 4px rgba(0, 0, 0, 0.03);
         }
-        
+
         .monogram-text {
-            font-family: 'Bodoni Moda', serif;
+            font-family: 'Playfair Display', serif;
             font-size: 40px;
             font-weight: 300;
             color: var(--gold);
@@ -354,11 +389,11 @@
             width: 100%;
             height: 100%;
         }
-        
+
         .names-container {
             margin-bottom: 40px;
         }
-        
+
         .couple-names {
             font-size: clamp(52px, 8vw, 92px);
             font-weight: 500;
@@ -368,13 +403,13 @@
             margin: 0;
             position: relative;
         }
-        
+
         .name-first,
         .name-second {
             display: inline-block;
             position: relative;
         }
-        
+
         .name-ampersand {
             font-size: clamp(36px, 6vw, 64px);
             color: var(--gold);
@@ -383,7 +418,7 @@
             font-style: italic;
             font-family: 'Playfair Display', serif;
         }
-        
+
         .date-divider {
             width: 60px;
             height: 1px;
@@ -391,7 +426,7 @@
             margin: 35px auto;
             position: relative;
         }
-        
+
         .date-divider::before,
         .date-divider::after {
             content: '';
@@ -403,10 +438,15 @@
             top: 50%;
             transform: translateY(-50%);
         }
-        
-        .date-divider::before { left: -10px; }
-        .date-divider::after { right: -10px; }
-        
+
+        .date-divider::before {
+            left: -10px;
+        }
+
+        .date-divider::after {
+            right: -10px;
+        }
+
         .wedding-date {
             font-family: 'Playfair Display', serif;
             font-size: clamp(22px, 3.5vw, 32px);
@@ -416,7 +456,7 @@
             text-transform: uppercase;
             font-style: normal;
         }
-        
+
         .hero-subtitle {
             font-family: 'Playfair Display', serif;
             font-size: 17px;
@@ -426,24 +466,25 @@
             letter-spacing: 0.05em;
             margin-top: 25px;
         }
-        
+
         /* Countdown - Minimalist Elegance with Pink */
         .countdown-section {
             padding: 100px 40px;
-            background: 
+            background:
                 linear-gradient(135deg, rgba(255, 214, 232, 0.08) 0%, rgba(232, 220, 240, 0.08) 100%),
                 var(--cream);
             position: relative;
         }
-        
+
         .section-header {
             text-align: center;
             margin-bottom: 70px;
         }
-        
+
         .section-title {
+            font-family: 'Sour Gummy', cursive;
             font-size: clamp(38px, 5vw, 56px);
-            font-weight: 600;
+            font-weight: 100;
             background: linear-gradient(135deg, var(--deep-purple), var(--coral-pink));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -451,7 +492,7 @@
             letter-spacing: 0.02em;
             margin-bottom: 15px;
         }
-        
+
         .section-subtitle {
             font-family: 'Playfair Display', serif;
             font-size: 16px;
@@ -459,7 +500,7 @@
             color: var(--text-light);
             font-style: italic;
         }
-        
+
         .countdown-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -467,7 +508,7 @@
             max-width: 900px;
             margin: 0 auto;
         }
-        
+
         .countdown-box {
             background: white;
             padding: 35px 20px;
@@ -475,14 +516,14 @@
             border-radius: 12px;
             position: relative;
             border: 2px solid transparent;
-            background-image: linear-gradient(white, white), 
-                              linear-gradient(135deg, var(--rose-pink), var(--lilac));
+            background-image: linear-gradient(white, white),
+                linear-gradient(135deg, var(--rose-pink), var(--lilac));
             background-origin: border-box;
             background-clip: padding-box, border-box;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 4px 20px rgba(245, 198, 213, 0.1);
         }
-        
+
         .countdown-box::before {
             content: '';
             position: absolute;
@@ -495,18 +536,18 @@
             transition: opacity 0.4s ease;
             border-radius: 12px 12px 0 0;
         }
-        
+
         .countdown-box:hover {
             transform: translateY(-8px);
             box-shadow: 0 16px 40px rgba(255, 158, 170, 0.2);
         }
-        
+
         .countdown-box:hover::before {
             opacity: 1;
         }
-        
+
         .countdown-value {
-            font-family: 'Bodoni Moda', serif;
+            font-family: 'Playfair Display', serif;
             font-size: 56px;
             font-weight: 500;
             background: linear-gradient(135deg, var(--coral-pink), var(--rose-pink));
@@ -518,7 +559,7 @@
             line-height: 1;
             letter-spacing: 0.02em;
         }
-        
+
         .countdown-unit {
             font-size: 11px;
             font-weight: 500;
@@ -526,13 +567,13 @@
             text-transform: uppercase;
             letter-spacing: 0.15em;
         }
-        
+
         /* Details Section - Two Column Layout with Pink */
         .details-section {
             padding: 100px 40px;
             background: white;
         }
-        
+
         .details-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -540,20 +581,20 @@
             max-width: 1100px;
             margin: 0 auto;
         }
-        
+
         .detail-item {
             padding: 50px 40px;
             background: white;
             border: 2px solid transparent;
             border-radius: 12px;
             position: relative;
-            background-image: linear-gradient(white, white), 
-                              linear-gradient(135deg, var(--rose-pink), var(--blush-pink));
+            background-image: linear-gradient(white, white),
+                linear-gradient(135deg, var(--rose-pink), var(--blush-pink));
             background-origin: border-box;
             background-clip: padding-box, border-box;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         .detail-item::after {
             content: '';
             position: absolute;
@@ -567,22 +608,22 @@
             pointer-events: none;
             border-radius: 10px;
         }
-        
+
         .detail-item:hover {
             transform: translateY(-6px);
             box-shadow: 0 16px 48px rgba(255, 158, 170, 0.15);
         }
-        
+
         .detail-item:hover::after {
             opacity: 1;
         }
-        
+
         .custom-icon {
             width: 44px;
             height: 44px;
             margin-bottom: 25px;
         }
-        
+
         .detail-label {
             font-size: 11px;
             font-weight: 600;
@@ -594,47 +635,47 @@
             letter-spacing: 0.15em;
             margin-bottom: 12px;
         }
-        
+
         .detail-primary {
-            font-family: 'Bodoni Moda', serif;
+            font-family: 'Playfair Display', serif;
             font-size: 28px;
             font-weight: 500;
             color: var(--deep-purple);
             margin-bottom: 10px;
             line-height: 1.3;
         }
-        
+
         .detail-secondary {
             font-size: 15px;
             color: var(--text-mid);
             line-height: 1.6;
             font-weight: 300;
         }
-        
+
         /* Map Section - Sophisticated with Pink */
         .map-section {
             padding: 100px 40px;
-            background: 
+            background:
                 linear-gradient(135deg, rgba(255, 214, 232, 0.1) 0%, rgba(232, 220, 240, 0.1) 100%),
                 var(--cream);
         }
-        
+
         .map-wrapper {
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .map-frame {
             border-radius: 12px;
             overflow: hidden;
             border: 2px solid var(--border-pink);
-            box-shadow: 
+            box-shadow:
                 0 20px 60px rgba(255, 158, 170, 0.15),
                 0 0 0 1px rgba(245, 198, 213, 0.2);
             margin-bottom: 35px;
             position: relative;
         }
-        
+
         .map-frame::before {
             content: '';
             position: absolute;
@@ -645,21 +686,21 @@
             background: linear-gradient(90deg, transparent, var(--coral-pink), transparent);
             z-index: 1;
         }
-        
+
         .map-frame iframe {
             width: 100%;
             height: 450px;
             border: none;
             display: block;
         }
-        
+
         .map-actions {
             display: flex;
             gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
         }
-        
+
         .map-btn {
             padding: 16px 36px;
             background: white;
@@ -678,7 +719,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .map-btn::before {
             content: '';
             position: absolute;
@@ -689,23 +730,23 @@
             background: linear-gradient(90deg, transparent, rgba(255, 158, 170, 0.1), transparent);
             transition: left 0.5s ease;
         }
-        
+
         .map-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(255, 158, 170, 0.2);
             border-color: var(--coral-pink);
             color: var(--deep-purple);
         }
-        
+
         .map-btn:hover::before {
             left: 100%;
         }
-        
+
         .map-btn-icon {
             width: 18px;
             height: 18px;
         }
-        
+
         /* Larger map buttons on desktop */
         @media (min-width: 769px) {
             .map-btn {
@@ -713,18 +754,18 @@
                 padding: 18px 40px;
             }
         }
-        
+
         /* Dress Code - Refined */
         .dress-code-section {
             padding: 100px 40px;
             background: white;
         }
-        
+
         .info-card {
             max-width: 800px;
             margin: 0 auto;
             padding: 60px 50px;
-            background: 
+            background:
                 linear-gradient(135deg, rgba(255, 214, 232, 0.08) 0%, rgba(232, 220, 240, 0.08) 100%),
                 var(--cream);
             border: 2px solid var(--border-pink);
@@ -733,7 +774,7 @@
             position: relative;
             box-shadow: 0 8px 32px rgba(245, 198, 213, 0.1);
         }
-        
+
         .info-card::before,
         .info-card::after {
             content: '';
@@ -742,21 +783,21 @@
             height: 40px;
             border: 2px solid var(--rose-pink);
         }
-        
+
         .info-card::before {
             top: 20px;
             left: 20px;
             border-right: none;
             border-bottom: none;
         }
-        
+
         .info-card::after {
             bottom: 20px;
             right: 20px;
             border-left: none;
             border-top: none;
         }
-        
+
         .info-icon-wrapper {
             width: 70px;
             height: 70px;
@@ -768,14 +809,14 @@
             justify-content: center;
             border: 2px solid var(--border-pink);
         }
-        
+
         .info-icon {
             width: 36px;
             height: 36px;
         }
-        
+
         .info-title {
-            font-family: 'Bodoni Moda', serif;
+            font-family: 'Playfair Display', serif;
             font-size: 38px;
             font-weight: 500;
             background: linear-gradient(135deg, var(--deep-purple), var(--coral-pink));
@@ -785,41 +826,48 @@
             margin-bottom: 20px;
             letter-spacing: 0.05em;
         }
-        
+
         .info-description {
             font-size: 16px;
             color: var(--text-mid);
             line-height: 1.8;
             font-weight: 300;
         }
-        
+
         /* Gift Section - Subtle Elegance with Pink */
         .gift-section {
             padding: 100px 40px;
             background: linear-gradient(135deg, rgba(255, 214, 232, 0.25) 0%, rgba(232, 220, 240, 0.2) 100%);
         }
-        
+
         .gift-content {
             max-width: 900px;
             margin: 0 auto;
             text-align: center;
         }
-        
+
         .gift-icon-wrapper {
             margin-bottom: 35px;
         }
-        
+
         .gift-icon {
             width: 52px;
             height: 52px;
             animation: gentle-sway 4s ease-in-out infinite;
         }
-        
+
         @keyframes gentle-sway {
-            0%, 100% { transform: rotate(-3deg); }
-            50% { transform: rotate(3deg); }
+
+            0%,
+            100% {
+                transform: rotate(-3deg);
+            }
+
+            50% {
+                transform: rotate(3deg);
+            }
         }
-        
+
         .gift-message {
             font-size: 17px;
             color: var(--text-mid);
@@ -828,29 +876,29 @@
             max-width: 600px;
             margin: 0 auto;
         }
-        
+
         /* RSVP Section - Elaborate Form Design */
         .rsvp-section {
             padding: 100px 40px;
             background: linear-gradient(135deg, rgba(255, 214, 232, 0.15) 0%, rgba(232, 220, 240, 0.15) 100%);
         }
-        
+
         .rsvp-container {
             max-width: 750px;
             margin: 0 auto;
         }
-        
+
         .rsvp-form {
             padding: 60px 50px;
             background: white;
             border: 1px solid var(--border-pink);
             border-radius: 8px;
-            box-shadow: 
+            box-shadow:
                 0 20px 60px rgba(245, 198, 213, 0.15),
                 0 0 0 1px rgba(201, 169, 97, 0.08);
             position: relative;
         }
-        
+
         .rsvp-form::before {
             content: '';
             position: absolute;
@@ -861,49 +909,56 @@
             height: 2px;
             background: linear-gradient(90deg, transparent, var(--rose-pink), transparent);
         }
-        
+
         .form-header {
             text-align: center;
             margin-bottom: 45px;
             padding-bottom: 30px;
             border-bottom: 1px solid rgba(245, 198, 213, 0.2);
         }
-        
+
         .form-header-icon {
             width: 50px;
             height: 50px;
             margin: 0 auto 20px;
             animation: gentle-bounce 3s ease-in-out infinite;
         }
-        
+
         @keyframes gentle-bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
         }
-        
+
         .form-header-title {
-            font-family: 'Bodoni Moda', serif;
+            font-family: 'Playfair Display', serif;
             font-size: 26px;
             font-weight: 500;
             color: var(--deep-purple);
             margin-bottom: 8px;
         }
-        
+
         .form-header-subtitle {
             font-size: 14px;
             color: var(--text-light);
             font-weight: 300;
         }
-        
+
         .form-group {
             margin-bottom: 32px;
             position: relative;
         }
-        
+
         .input-wrapper {
             position: relative;
         }
-        
+
         .input-icon {
             position: absolute;
             left: 20px;
@@ -916,7 +971,7 @@
             z-index: 1;
             transition: all 0.3s ease;
         }
-        
+
         .form-label {
             display: block;
             font-size: 11px;
@@ -927,7 +982,7 @@
             margin-bottom: 12px;
             transition: color 0.3s ease;
         }
-        
+
         .form-input,
         .form-select,
         .form-textarea {
@@ -942,38 +997,38 @@
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             outline: none;
         }
-        
+
         .form-textarea {
             padding-left: 20px;
         }
-        
+
         .form-input:focus,
         .form-select:focus,
         .form-textarea:focus {
             background: white;
             border-color: var(--rose-pink);
-            box-shadow: 
+            box-shadow:
                 0 0 0 4px rgba(245, 198, 213, 0.15),
                 0 4px 12px rgba(245, 198, 213, 0.2);
             transform: translateY(-2px);
         }
-        
-        .form-input:focus + .input-icon,
-        .form-select:focus + .input-icon {
+
+        .form-input:focus+.input-icon,
+        .form-select:focus+.input-icon {
             color: var(--coral-pink);
             transform: translateY(-50%) scale(1.1);
         }
-        
+
         .form-group:focus-within .form-label {
             color: var(--coral-pink);
         }
-        
+
         .form-textarea {
             resize: vertical;
             min-height: 120px;
             font-family: 'Raleway', sans-serif;
         }
-        
+
         .form-select {
             appearance: none;
             background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L7 7L13 1' stroke='%23F5C6D5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
@@ -982,7 +1037,7 @@
             padding-right: 50px;
             cursor: pointer;
         }
-        
+
         .submit-btn {
             width: 100%;
             padding: 20px 40px;
@@ -1000,7 +1055,7 @@
             overflow: hidden;
             box-shadow: 0 8px 24px rgba(255, 158, 170, 0.3);
         }
-        
+
         .submit-btn::before {
             content: '';
             position: absolute;
@@ -1011,7 +1066,7 @@
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
             transition: left 0.6s ease;
         }
-        
+
         .submit-btn::after {
             content: '';
             position: absolute;
@@ -1024,25 +1079,25 @@
             transform: translate(-50%, -50%);
             transition: width 0.6s ease, height 0.6s ease;
         }
-        
+
         .submit-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 16px 40px rgba(255, 158, 170, 0.4);
         }
-        
+
         .submit-btn:hover::before {
             left: 100%;
         }
-        
+
         .submit-btn:hover::after {
             width: 400px;
             height: 400px;
         }
-        
+
         .submit-btn:active {
             transform: translateY(-1px);
         }
-        
+
         .btn-icon {
             margin-right: 10px;
             width: 16px;
@@ -1050,7 +1105,7 @@
             display: inline-block;
             vertical-align: middle;
         }
-        
+
         /* Thank You Overlay - Refined Animation */
         .thank-you-modal {
             position: fixed;
@@ -1067,12 +1122,12 @@
             opacity: 0;
             transition: opacity 0.4s ease;
         }
-        
+
         .thank-you-modal.active {
             display: flex;
             opacity: 1;
         }
-        
+
         .thank-you-box {
             max-width: 500px;
             padding: 60px 50px;
@@ -1084,18 +1139,19 @@
             position: relative;
             animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         @keyframes slideUp {
             from {
                 opacity: 0;
                 transform: translateY(40px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         .thank-you-emoji {
             width: 64px;
             height: 64px;
@@ -1103,12 +1159,19 @@
             display: block;
             animation: float-gentle 3s ease-in-out infinite;
         }
-        
+
         @keyframes float-gentle {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
-        
+
         .thank-you-heading {
             font-family: 'Bodoni Moda', serif;
             font-size: 42px;
@@ -1117,14 +1180,14 @@
             margin-bottom: 20px;
             letter-spacing: 0.02em;
         }
-        
+
         .thank-you-message {
             font-size: 16px;
             color: var(--text-mid);
             line-height: 1.7;
             margin-bottom: 35px;
         }
-        
+
         .close-modal-btn {
             padding: 14px 40px;
             background: var(--gold);
@@ -1138,12 +1201,12 @@
             cursor: pointer;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         .close-modal-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(201, 169, 97, 0.4);
         }
-        
+
         /* Footer - Minimalist */
         footer {
             padding: 80px 40px;
@@ -1151,7 +1214,7 @@
             color: white;
             text-align: center;
         }
-        
+
         .footer-quote {
             font-family: 'Playfair Display', serif;
             font-size: 19px;
@@ -1160,36 +1223,37 @@
             margin-bottom: 20px;
             opacity: 0.9;
         }
-        
+
         .footer-names {
             font-size: 14px;
             font-weight: 300;
             letter-spacing: 0.15em;
             opacity: 0.7;
         }
-        
+
         /* Mobile Animations & Interactions */
         @media (max-width: 768px) {
             .hero {
                 padding: 100px 25px 60px;
             }
-            
+
             .couple-names {
                 font-size: 44px;
                 animation: fade-in-up-mobile 1s ease-out;
             }
-            
+
             @keyframes fade-in-up-mobile {
                 from {
                     opacity: 0;
                     transform: translateY(30px);
                 }
+
                 to {
                     opacity: 1;
                     transform: translateY(0);
                 }
             }
-            
+
             .countdown-section,
             .details-section,
             .map-section,
@@ -1198,164 +1262,175 @@
             .rsvp-section {
                 padding: 70px 25px;
             }
-            
+
             .details-grid {
                 grid-template-columns: 1fr;
                 gap: 25px;
             }
-            
+
             .detail-item {
                 padding: 40px 30px;
                 animation: slide-in-mobile 0.6s ease-out;
             }
-            
+
             @keyframes slide-in-mobile {
                 from {
                     opacity: 0;
                     transform: translateX(-20px);
                 }
+
                 to {
                     opacity: 1;
                     transform: translateX(0);
                 }
             }
-            
+
             .countdown-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 20px;
             }
-            
+
             .countdown-box {
                 padding: 30px 20px;
                 animation: pop-in-mobile 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             }
-            
+
             @keyframes pop-in-mobile {
                 0% {
                     opacity: 0;
                     transform: scale(0.8);
                 }
+
                 100% {
                     opacity: 1;
                     transform: scale(1);
                 }
             }
-            
+
             .countdown-value {
                 font-size: 48px;
             }
-            
+
             .music-control {
                 bottom: 25px;
                 right: 25px;
                 animation: bounce-in-mobile 1s ease-out 0.5s both;
             }
-            
+
             @keyframes bounce-in-mobile {
                 0% {
                     opacity: 0;
                     transform: scale(0) translateY(100px);
                 }
+
                 50% {
                     transform: scale(1.1) translateY(-10px);
                 }
+
                 100% {
                     opacity: 1;
                     transform: scale(1) translateY(0);
                 }
             }
-            
+
             .music-button {
                 width: 56px;
                 height: 56px;
             }
-            
+
             .music-tooltip {
                 display: none;
             }
-            
+
             .floral-top-right,
             .floral-bottom-left {
                 animation: gentle-float-mobile 6s ease-in-out infinite;
             }
-            
+
             @keyframes gentle-float-mobile {
-                0%, 100% { 
-                    transform: translateY(0) scale(0.9); 
+
+                0%,
+                100% {
+                    transform: translateY(0) scale(0.9);
                     opacity: 0.7;
                 }
-                50% { 
-                    transform: translateY(-10px) scale(1); 
+
+                50% {
+                    transform: translateY(-10px) scale(1);
                     opacity: 0.85;
                 }
             }
-            
+
             .info-card,
             .rsvp-form {
                 padding: 45px 30px;
                 animation: fade-in-up-mobile 0.8s ease-out;
             }
-            
+
             .form-input,
             .form-select,
             .form-textarea {
                 transition: all 0.3s ease;
             }
-            
+
             .form-input:focus,
             .form-select:focus,
             .form-textarea:focus {
                 transform: scale(1.02);
             }
-            
+
             .submit-btn {
                 padding: 18px 40px;
                 animation: pulse-mobile 2s ease-in-out infinite;
             }
-            
+
             @keyframes pulse-mobile {
-                0%, 100% {
+
+                0%,
+                100% {
                     box-shadow: 0 8px 24px rgba(255, 158, 170, 0.3);
                 }
+
                 50% {
                     box-shadow: 0 8px 32px rgba(255, 158, 170, 0.5);
                 }
             }
-            
+
             .submit-btn:active {
                 animation: none;
                 transform: scale(0.95);
             }
-            
+
             .map-actions {
                 flex-direction: column;
             }
-            
+
             .map-btn {
                 width: 100%;
                 justify-content: center;
                 animation: slide-in-mobile 0.6s ease-out;
             }
-            
+
             .map-btn:active {
                 transform: scale(0.98);
             }
-            
+
             .section-title {
                 animation: fade-in-mobile 0.8s ease-out;
             }
-            
+
             @keyframes fade-in-mobile {
                 from {
                     opacity: 0;
                     transform: translateY(20px);
                 }
+
                 to {
                     opacity: 1;
                     transform: translateY(0);
                 }
             }
-            
+
             /* Touch feedback */
             .countdown-box:active,
             .detail-item:active,
@@ -1363,86 +1438,96 @@
                 transform: scale(0.98);
             }
         }
-        
+
         @media (max-width: 480px) {
             .monogram {
                 width: 80px;
                 height: 80px;
                 animation: rotate-in-mobile 1s ease-out;
             }
-            
+
             @keyframes rotate-in-mobile {
                 from {
                     opacity: 0;
                     transform: rotate(-180deg) scale(0.5);
                 }
+
                 to {
                     opacity: 1;
                     transform: rotate(0deg) scale(1);
                 }
             }
-            
+
             .monogram-text {
                 font-size: 32px;
             }
-            
+
             .section-title {
+                font-family: 'Sour Gummy', cursive;
                 font-size: 34px;
             }
-            
+
+
             .floral-accent-top,
             .floral-accent-bottom {
                 opacity: 0.4;
             }
         }
-        
+
         /* Smooth Transitions */
         * {
             -webkit-tap-highlight-color: transparent;
         }
-        
-        a, button {
+
+        a,
+        button {
             -webkit-touch-callout: none;
             user-select: none;
         }
     </style>
 </head>
+
 <body>
     <!-- Tulip Background Decorations -->
     <div class="tulip-bg">
         <svg class="tulip-accent tulip-1" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
-            <path d="M100 260 Q70 200 70 150 Q70 100 100 60 Q130 100 130 150 Q130 200 100 260" fill="#C8A8D8" opacity="0.4"/>
-            <ellipse cx="100" cy="140" rx="20" ry="35" fill="#F8E8F0" opacity="0.5"/>
-            <line x1="100" y1="260" x2="100" y2="290" stroke="#9B7BA8" stroke-width="2"/>
+            <path d="M100 260 Q70 200 70 150 Q70 100 100 60 Q130 100 130 150 Q130 200 100 260" fill="#C8A8D8"
+                opacity="0.4" />
+            <ellipse cx="100" cy="140" rx="20" ry="35" fill="#F8E8F0" opacity="0.5" />
+            <line x1="100" y1="260" x2="100" y2="290" stroke="#9B7BA8" stroke-width="2" />
         </svg>
-        
+
         <svg class="tulip-accent tulip-2" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
-            <path d="M100 260 Q70 200 70 150 Q70 100 100 60 Q130 100 130 150 Q130 200 100 260" fill="#F8E8F0" opacity="0.4"/>
-            <ellipse cx="100" cy="140" rx="20" ry="35" fill="#C8A8D8" opacity="0.5"/>
-            <line x1="100" y1="260" x2="100" y2="290" stroke="#C9A961" stroke-width="2"/>
+            <path d="M100 260 Q70 200 70 150 Q70 100 100 60 Q130 100 130 150 Q130 200 100 260" fill="#F8E8F0"
+                opacity="0.4" />
+            <ellipse cx="100" cy="140" rx="20" ry="35" fill="#C8A8D8" opacity="0.5" />
+            <line x1="100" y1="260" x2="100" y2="290" stroke="#C9A961" stroke-width="2" />
         </svg>
-        
+
         <svg class="tulip-accent tulip-3" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
-            <path d="M100 260 Q70 200 70 150 Q70 100 100 60 Q130 100 130 150 Q130 200 100 260" fill="#E8DCF0" opacity="0.4"/>
-            <ellipse cx="100" cy="140" rx="20" ry="35" fill="#F8E8F0" opacity="0.5"/>
-            <line x1="100" y1="260" x2="100" y2="290" stroke="#9B7BA8" stroke-width="2"/>
+            <path d="M100 260 Q70 200 70 150 Q70 100 100 60 Q130 100 130 150 Q130 200 100 260" fill="#E8DCF0"
+                opacity="0.4" />
+            <ellipse cx="100" cy="140" rx="20" ry="35" fill="#F8E8F0" opacity="0.5" />
+            <line x1="100" y1="260" x2="100" y2="290" stroke="#9B7BA8" stroke-width="2" />
         </svg>
-        
+
         <svg class="tulip-accent tulip-4" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
-            <path d="M100 260 Q70 200 70 150 Q70 100 100 60 Q130 100 130 150 Q130 200 100 260" fill="#C8A8D8" opacity="0.4"/>
-            <ellipse cx="100" cy="140" rx="20" ry="35" fill="#E8DCF0" opacity="0.5"/>
-            <line x1="100" y1="260" x2="100" y2="290" stroke="#C9A961" stroke-width="2"/>
+            <path d="M100 260 Q70 200 70 150 Q70 100 100 60 Q130 100 130 150 Q130 200 100 260" fill="#C8A8D8"
+                opacity="0.4" />
+            <ellipse cx="100" cy="140" rx="20" ry="35" fill="#E8DCF0" opacity="0.5" />
+            <line x1="100" y1="260" x2="100" y2="290" stroke="#C9A961" stroke-width="2" />
         </svg>
     </div>
-    
+
     <!-- Music Control -->
     <div class="music-control">
         <button class="music-button" id="musicBtn" aria-label="Toggle music">
             <span class="music-icon" id="musicIcon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 18V5L21 3V16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <circle cx="6" cy="18" r="3" stroke="white" stroke-width="2"/>
-                    <circle cx="18" cy="16" r="3" stroke="white" stroke-width="2"/>
+                    <path d="M9 18V5L21 3V16" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <circle cx="6" cy="18" r="3" stroke="white" stroke-width="2" />
+                    <circle cx="18" cy="16" r="3" stroke="white" stroke-width="2" />
                 </svg>
             </span>
             <div class="music-tooltip">
@@ -1451,23 +1536,24 @@
             </div>
         </button>
     </div>
-    
+
     <audio id="weddingAudio" loop>
         <source src="young-and-beautiful.mp3" type="audio/mpeg">\
     </audio>
-    
+
     <!-- Hero Section -->
     <section class="hero">
         <img class="floral-decoration floral-top-right" src="Floresacuarela3.png" alt="Flores decorativas">
         <img class="floral-decoration floral-bottom-left" src="Floresacuarela2.png" alt="Flores decorativas">
-        
+
         <div class="hero-content">
             <div class="monogram">
                 <div class="monogram-circle">
-                   <span class="monogram-text"><img src="logo.png" alt="Logo" style="width: 200px; height: 200px; margin-top: -20px;"></span>
+                    <span class="monogram-text"><img src="logo.png" alt="Logo"
+                            style="width: 200px; height: 200px; margin-top: -20px;"></span>
                 </div>
             </div>
-            
+
             <div class="names-container">
                 <h1 class="couple-names">
                     <span class="name-first">Camila</span>
@@ -1475,21 +1561,21 @@
                     <span class="name-second">Marielis</span>
                 </h1>
             </div>
-            
+
             <div class="date-divider"></div>
-            
+
             <p class="wedding-date">18 de Julio de 2027</p>
             <p class="hero-subtitle">Te invitamos a celebrar nuestro amor</p>
         </div>
     </section>
-    
+
     <!-- Countdown Section -->
     <section class="countdown-section">
         <div class="section-header">
             <h2 class="section-title">Cuenta Regresiva</h2>
             <p class="section-subtitle">El tiempo vuela cuando estás enamorada</p>
         </div>
-        
+
         <div class="countdown-grid">
             <div class="countdown-box">
                 <span class="countdown-value" id="days">000</span>
@@ -1509,28 +1595,29 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Details Section -->
     <section class="details-section">
         <div class="section-header">
             <h2 class="section-title">Detalles</h2>
         </div>
-        
+
         <div class="details-grid">
             <div class="detail-item">
                 <svg class="custom-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="9" stroke="#C9A961" stroke-width="1.5"/>
-                    <path d="M12 6V12L16 14" stroke="#C9A961" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="12" cy="12" r="9" stroke="#C9A961" stroke-width="1.5" />
+                    <path d="M12 6V12L16 14" stroke="#C9A961" stroke-width="1.5" stroke-linecap="round" />
                 </svg>
                 <div class="detail-label">Hora</div>
                 <div class="detail-primary">12:00 md</div>
                 <div class="detail-secondary">Ceremonia y fiesta</div>
             </div>
-            
+
             <div class="detail-item">
                 <svg class="custom-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L4 8V21H9V15H15V21H20V8L12 2Z" stroke="#C9A961" stroke-width="1.5" stroke-linejoin="round"/>
-                    <path d="M12 12L12 12.01" stroke="#C9A961" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M12 2L4 8V21H9V15H15V21H20V8L12 2Z" stroke="#C9A961" stroke-width="1.5"
+                        stroke-linejoin="round" />
+                    <path d="M12 12L12 12.01" stroke="#C9A961" stroke-width="2" stroke-linecap="round" />
                 </svg>
                 <div class="detail-label">Lugar</div>
                 <div class="detail-primary">Casa Pinto</div>
@@ -1538,60 +1625,53 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Map Section -->
     <section class="map-section">
         <div class="section-header">
             <h2 class="section-title">Ubicación</h2>
         </div>
-        
+
         <div class="map-wrapper">
             <div class="map-frame">
-                <iframe 
+                <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.0412784248642!2d-84.06294812502921!3d9.930520374226546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e382ccd583f3%3A0xb149b6ba6ae65701!2sCasa%20Pinto!5e0!3m2!1ses!2scr!4v1767473281604!5m2!1ses!2scr"
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
-            
+
             <div class="map-actions">
-                <a href="https://www.google.com/maps/search/?api=1&query=Av.+8,+San+Jos%C3%A9,+San+Pedro,+Los+Yoses,+11501" 
-                   target="_blank" 
-                   rel="noopener" 
-                   class="map-btn">
+                <a href="https://www.google.com/maps/search/?api=1&query=Av.+8,+San+Jos%C3%A9,+San+Pedro,+Los+Yoses,+11501"
+                    target="_blank" rel="noopener" class="map-btn">
                     <svg class="map-btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
+                        <path
+                            d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"
+                            fill="currentColor" />
                     </svg>
                     Google Maps
                 </a>
-                <a href="https://www.waze.com/ul?ll=9.930520374226546,-84.0603732&navigate=yes&zoom=17" 
-                   target="_blank" 
-                   rel="noopener" 
-                   class="map-btn">
+                <a href="https://www.waze.com/ul?ll=9.930520374226546,-84.0603732&navigate=yes&zoom=17" target="_blank"
+                    rel="noopener" class="map-btn">
                     <svg class="map-btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="12" cy="9" r="2.5" fill="currentColor"/>
+                        <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="12" cy="9" r="2.5" fill="currentColor" />
                     </svg>
                     Waze
                 </a>
             </div>
         </div>
     </section>
-    
+
     <!-- Dress Code Section -->
     <section class="dress-code-section">
         <div class="section-header">
             <h2 class="section-title">Código de Vestimenta</h2>
         </div>
-        
+
         <div class="info-card">
             <div class="info-icon-wrapper">
-                <svg class="info-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L9 5H7L6 7V22H18V7L17 5H15L12 2Z" stroke="#C9A961" stroke-width="1.5" stroke-linejoin="round"/>
-                    <path d="M9 8C9 8 10 11 12 11C14 11 15 8 15 8" stroke="#C9A961" stroke-width="1.5" stroke-linecap="round"/>
-                    <line x1="6" y1="12" x2="18" y2="12" stroke="#C9A961" stroke-width="1.5"/>
-                </svg>
+                <img src="vestido-de-novia.png" alt="Cocktail Icon" class="info-icon">
             </div>
             <h3 class="info-title">Cocktail</h3>
             <p class="info-description">
@@ -1599,61 +1679,71 @@
             </p>
         </div>
     </section>
-    
+
     <!-- Gift Section -->
     <section class="gift-section">
         <div class="section-header">
             <h2 class="section-title">Lluvia de Sobres</h2>
         </div>
-        
+
         <div class="gift-content">
             <div class="gift-icon-wrapper">
                 <svg class="gift-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 12V22H4V12" stroke="#C9A961" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M22 7H2V12H22V7Z" stroke="#C9A961" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 22V7" stroke="#C9A961" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 7H7.5C6.5 7 5 6 5 4.5C5 3 6 2 7.5 2C9 2 12 5 12 7Z" stroke="#C9A961" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 7H16.5C17.5 7 19 6 19 4.5C19 3 18 2 16.5 2C15 2 12 5 12 7Z" stroke="#C9A961" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20 12V22H4V12" stroke="#C9A961" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M22 7H2V12H22V7Z" stroke="#C9A961" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M12 22V7" stroke="#C9A961" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M12 7H7.5C6.5 7 5 6 5 4.5C5 3 6 2 7.5 2C9 2 12 5 12 7Z" stroke="#C9A961" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12 7H16.5C17.5 7 19 6 19 4.5C19 3 18 2 16.5 2C15 2 12 5 12 7Z" stroke="#C9A961"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </div>
             <p class="gift-message">
-                Tu presencia es nuestro mejor regalo. Sin embargo, si deseas contribuir a nuestro futuro juntas, 
-                agradecemos de corazón tu generosidad. Habrá un buzón especial durante la celebración para 
+                Tu presencia es nuestro mejor regalo. Sin embargo, si deseas contribuir a nuestro futuro juntas,
+                agradecemos de corazón tu generosidad. Habrá un buzón especial durante la celebración para
                 tus buenos deseos y bendiciones.
             </p>
         </div>
     </section>
-    
+
     <!-- RSVP Section -->
     <section class="rsvp-section">
         <div class="section-header">
             <h2 class="section-title">Confirmación</h2>
             <p class="section-subtitle">Por favor confirma tu asistencia</p>
         </div>
-        
+
         <div class="rsvp-container">
             <form class="rsvp-form" id="rsvpForm">
                 <div class="form-header">
                     <svg class="form-header-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="#F5C6D5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="12" cy="7" r="4" stroke="#F5C6D5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M12 2L14 6L18 7L15 10L16 14L12 12L8 14L9 10L6 7L10 6L12 2Z" fill="#FFD6E8" opacity="0.3"/>
+                        <path
+                            d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
+                            stroke="#F5C6D5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="12" cy="7" r="4" stroke="#F5C6D5" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M12 2L14 6L18 7L15 10L16 14L12 12L8 14L9 10L6 7L10 6L12 2Z" fill="#FFD6E8"
+                            opacity="0.3" />
                     </svg>
                     <h3 class="form-header-title">Nos encantaría verte</h3>
                     <p class="form-header-subtitle">Completa tus datos para confirmar</p>
                 </div>
-                
+
                 <div class="form-group">
                     <label class="form-label" for="name">Nombre Completo</label>
                     <div class="input-wrapper">
                         <input type="text" id="name" class="form-input" required placeholder="Tu nombre y apellido">
                         <svg class="input-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
-                            <path d="M6 21V19C6 16.7909 7.79086 15 10 15H14C16.2091 15 18 16.7909 18 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2" />
+                            <path d="M6 21V19C6 16.7909 7.79086 15 10 15H14C16.2091 15 18 16.7909 18 19V21"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                         </svg>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label class="form-label" for="attendance">Asistencia</label>
                     <div class="input-wrapper">
@@ -1663,30 +1753,36 @@
                             <option value="no">No podré asistir</option>
                         </select>
                         <svg class="input-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20.84 4.61C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.1283 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7564 11.2728 22.0329 10.6053C22.3095 9.93789 22.4518 9.22248 22.4518 8.5C22.4518 7.77752 22.3095 7.06211 22.0329 6.39469C21.7564 5.72728 21.351 5.12084 20.84 4.61Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path
+                                d="M20.84 4.61C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.1283 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7564 11.2728 22.0329 10.6053C22.3095 9.93789 22.4518 9.22248 22.4518 8.5C22.4518 7.77752 22.3095 7.06211 22.0329 6.39469C21.7564 5.72728 21.351 5.12084 20.84 4.61Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label class="form-label" for="dietary">Restricciones Alimenticias (Opcional)</label>
-                    <textarea id="dietary" class="form-textarea" placeholder="Déjanos saber si tienes alguna restricción alimenticia"></textarea>
+                    <textarea id="dietary" class="form-textarea"
+                        placeholder="Déjanos saber si tienes alguna restricción alimenticia"></textarea>
                 </div>
-                
+
                 <button type="submit" class="submit-btn">
-                    <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.84 4.61C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.1283 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7564 11.2728 22.0329 10.6053C22.3095 9.93789 22.4518 9.22248 22.4518 8.5C22.4518 7.77752 22.3095 7.06211 22.0329 6.39469C21.7564 5.72728 21.351 5.12084 20.84 4.61Z" fill="white"/>
+                    <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.84 4.61C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.1283 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7564 11.2728 22.0329 10.6053C22.3095 9.93789 22.4518 9.22248 22.4518 8.5C22.4518 7.77752 22.3095 7.06211 22.0329 6.39469C21.7564 5.72728 21.351 5.12084 20.84 4.61Z"
+                            fill="white" />
                     </svg>
                     Confirmar Asistencia
                 </button>
             </form>
         </div>
     </section>
-    
+
     <!-- Thank You Modal -->
     <div class="thank-you-modal" id="thankYouModal">
         <div class="thank-you-box">
-           <img src="logo.png" alt="" style="width: 300px; height: 300px;">
+            <img src="logo.png" alt="" style="width: 300px; height: 300px;">
             <h3 class="thank-you-heading">¡Gracias!</h3>
             <p class="thank-you-message">
                 Hemos recibido tu confirmación.<br>
@@ -1695,21 +1791,21 @@
             <button class="close-modal-btn" onclick="closeModal()">Cerrar</button>
         </div>
     </div>
-    
+
     <!-- Footer -->
     <footer>
         <p class="footer-quote">Y después de tanta distancia, hoy celebramos estar juntas para siempre.</p>
         <p class="footer-names">CAMILA & MARIELIS • 18.07.2027</p>
     </footer>
-    
+
     <script>
         // Countdown Timer
         const weddingDate = new Date('July 18, 2027 12:00:00').getTime();
-        
+
         function updateCountdown() {
             const now = new Date().getTime();
             const distance = weddingDate - now;
-            
+
             if (distance < 0) {
                 document.getElementById('days').textContent = '000';
                 document.getElementById('hours').textContent = '00';
@@ -1717,21 +1813,21 @@
                 document.getElementById('seconds').textContent = '00';
                 return;
             }
-            
+
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
+
             document.getElementById('days').textContent = days.toString().padStart(3, '0');
             document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
             document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
             document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
         }
-        
+
         updateCountdown();
         setInterval(updateCountdown, 1000);
-        
+
         // Music Player with Proper Error Handling and Autoplay
         const musicBtn = document.getElementById('musicBtn');
         const audio = document.getElementById('weddingAudio');
@@ -1739,7 +1835,7 @@
         let isPlaying = false;
         let hasInteracted = false;
         let autoplayAttempted = false;
-        
+
         // Update icon based on state
         function updateMusicIcon(playing) {
             if (playing) {
@@ -1761,7 +1857,7 @@
                 musicBtn.classList.remove('music-playing');
             }
         }
-        
+
         // Try to autoplay on first user interaction
         function tryAutoplay() {
             if (!autoplayAttempted && !hasInteracted) {
@@ -1777,21 +1873,21 @@
                 });
             }
         }
-        
+
         // Try autoplay on various user interactions
         ['click', 'touchstart', 'scroll', 'keydown'].forEach(event => {
             document.addEventListener(event, tryAutoplay, { once: true, passive: true });
         });
-        
+
         // Also try after a small delay (in case page loads with focus)
         setTimeout(tryAutoplay, 500);
-        
+
         // Music toggle
         musicBtn.addEventListener('click', async (e) => {
             e.preventDefault();
             e.stopPropagation();
             hasInteracted = true;
-            
+
             try {
                 if (isPlaying) {
                     audio.pause();
@@ -1808,7 +1904,7 @@
                 updateMusicIcon(false);
             }
         });
-        
+
         // Handle audio events
         audio.addEventListener('pause', () => {
             if (hasInteracted) {
@@ -1816,38 +1912,38 @@
                 updateMusicIcon(false);
             }
         });
-        
+
         audio.addEventListener('play', () => {
             isPlaying = true;
             updateMusicIcon(true);
         });
-        
+
         // Prevent errors from audio state changes
         audio.addEventListener('error', (e) => {
             console.log('Audio source not available - please add your MP3 file');
         });
-        
+
         // RSVP Form Submission con Google Sheets
         const rsvpForm = document.getElementById('rsvpForm');
         const thankYouModal = document.getElementById('thankYouModal');
-        
+
         const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzNcrM4RmWqTTwe7uwKfgaWbnh9Y_ELTrDVJRYkDf1pwq523nGQ500uM1oBZmJGIr2bzg/exec';
-        
-        rsvpForm.addEventListener('submit', async function(e) {
+
+        rsvpForm.addEventListener('submit', async function (e) {
             e.preventDefault();
-            
+
             // Deshabilitar el botón de envío
             const submitBtn = rsvpForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
             submitBtn.disabled = true;
             submitBtn.textContent = 'Enviando...';
-            
+
             const formData = {
                 name: document.getElementById('name').value,
                 attendance: document.getElementById('attendance').value,
                 dietary: document.getElementById('dietary').value
             };
-            
+
             try {
                 // Enviar datos a Google Sheets
                 const response = await fetch(SCRIPT_URL, {
@@ -1858,16 +1954,16 @@
                     },
                     body: JSON.stringify(formData)
                 });
-                
+
                 // Mostrar modal de agradecimiento
                 thankYouModal.classList.add('active');
-                
+
                 // Resetear formulario
                 rsvpForm.reset();
-                
+
                 // Log para debugging
                 console.log('RSVP enviado exitosamente:', formData);
-                
+
             } catch (error) {
                 console.error('Error al enviar RSVP:', error);
                 // Aún así mostrar el modal de agradecimiento
@@ -1876,25 +1972,25 @@
                 // Restaurar botón
                 submitBtn.disabled = false;
                 submitBtn.textContent = originalText;
-                
+
                 // Auto cerrar después de 4 segundos
                 setTimeout(() => {
                     closeModal();
                 }, 4000);
             }
         });
-        
+
         function closeModal() {
             thankYouModal.classList.remove('active');
         }
-        
+
         // Close modal on escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && thankYouModal.classList.contains('active')) {
                 closeModal();
             }
         });
-        
+
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1908,13 +2004,13 @@
                 }
             });
         });
-        
+
         // Entrance animations on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1923,7 +2019,7 @@
                 }
             });
         }, observerOptions);
-        
+
         // Observe sections for animation
         document.querySelectorAll('section').forEach(section => {
             section.style.opacity = '0';
@@ -1931,7 +2027,7 @@
             section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
             observer.observe(section);
         });
-        
+
         // Initialize first section immediately
         const heroSection = document.querySelector('.hero');
         if (heroSection) {
@@ -1940,4 +2036,5 @@
         }
     </script>
 </body>
+
 </html>
